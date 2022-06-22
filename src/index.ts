@@ -7,6 +7,13 @@ const matches = fs
     return row.split(',');
   });
 
+// Enum - enumeration
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
+}
+
 let maUnitedWins = 0;
 
 for (let match of matches) {
