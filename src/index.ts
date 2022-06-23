@@ -1,15 +1,8 @@
-import fs from 'fs';
-import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReader';
+import { MatchResult } from './MatchResult';
 
-const reader = new CsvFileReader('football.csv');
+const reader = new MatchReader('football.csv');
 reader.read();
-
-// Enum - enumeration
-enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-}
 
 let maUnitedWins = 0;
 for (let match of reader.data) {
